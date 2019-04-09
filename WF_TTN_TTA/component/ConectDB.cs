@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WF_TTN_TTA.component
 {
-    public partial class ConectDB : Form
+    public partial class login : Form
     {
-        public ConectDB()
+        public login()
         {
             InitializeComponent();
         }

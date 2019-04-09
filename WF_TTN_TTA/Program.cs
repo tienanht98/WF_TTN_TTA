@@ -16,7 +16,7 @@ namespace WF_TTN_TTA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ConectDB());
+            Application.Run(new flogin());
         }
     }
 }

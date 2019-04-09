@@ -1,6 +1,6 @@
 ﻿namespace WF_TTN_TTA.component
 {
-    partial class ConectDB
+    partial class login
     {
         /// <summary>
         /// Required designer variable.

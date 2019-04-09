@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,13 +70,39 @@
     <Compile Include="component\fTableManger.Designer.cs">
       <DependentUpon>fTableManger.cs</DependentUpon>
     </Compile>
-    <Compile Include="component\login.cs">
+    <Compile Include="component\flogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="component\login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="component\flogin.Designer.cs">
+      <DependentUpon>flogin.cs</DependentUpon>
     </Compile>
     <Compile Include="component\Utilities.cs" />
+    <Compile Include="Dao\UserDao.cs" />
+    <Compile Include="DataLayer\DANTOC.cs" />
+    <Compile Include="DataLayer\DIEM.cs" />
+    <Compile Include="DataLayer\GIAOVIEN.cs" />
+    <Compile Include="DataLayer\HANHKIEM.cs" />
+    <Compile Include="DataLayer\HOCKY.cs" />
+    <Compile Include="DataLayer\HOCLUC.cs" />
+    <Compile Include="DataLayer\HOCSINH.cs" />
+    <Compile Include="DataLayer\KETQUA.cs" />
+    <Compile Include="DataLayer\KHOILOP.cs" />
+    <Compile Include="DataLayer\KQ_CA_NAM_MON_HOC.cs" />
+    <Compile Include="DataLayer\KQ_CA_NAM_TONG_HOP.cs" />
+    <Compile Include="DataLayer\KQ_HOC_KY_MON_HOC.cs" />
+    <Compile Include="DataLayer\KQ_HOC_KY_TONG_HOP.cs" />
+    <Compile Include="DataLayer\LOAIDIEM.cs" />
+    <Compile Include="DataLayer\LOAINGUOIDUNG.cs" />
+    <Compile Include="DataLayer\LOP.cs" />
+    <Compile Include="DataLayer\MONHOC.cs" />
+    <Compile Include="DataLayer\NAMHOC.cs" />
+    <Compile Include="DataLayer\NGHENGHIEP.cs" />
+    <Compile Include="DataLayer\NGUOIDUNG.cs" />
+    <Compile Include="DataLayer\PHANCONG.cs" />
+    <Compile Include="DataLayer\PHANLOP.cs" />
+    <Compile Include="DataLayer\QLHSTHPT.cs" />
+    <Compile Include="DataLayer\QUYDINH.cs" />
+    <Compile Include="DataLayer\TONGIAO.cs" />
     <Compile Include="Model\NguoiDungInfo.cs" />
     <Compile Include="Model\QuyDinhInfo.cs" />
     <Compile Include="Model\Usertype.cs" />
@@ -76,8 +111,8 @@
     <EmbeddedResource Include="component\ConectDB.resx">
       <DependentUpon>ConectDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="component\login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="component\flogin.resx">
+      <DependentUpon>flogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +123,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

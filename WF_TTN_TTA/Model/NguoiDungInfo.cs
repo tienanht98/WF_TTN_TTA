@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using WF_TTN_TTA.DataLayer;
 namespace WF_TTN_TTA.Model
 {
     class NguoiDungInfo
@@ -11,6 +11,16 @@ namespace WF_TTN_TTA.Model
         public NguoiDungInfo()
         {
 
+        }
+        public NguoiDungInfo(NGUOIDUNG entity)
+        {
+           if( entity!=null)
+            { 
+            this.MaND = entity.MaND;
+            this.MatKhau = entity.MatKhau;
+            this.TenDNhap = entity.TenDNhap;
+            this.TenND = entity.TenND;
+            }
         }
 
         private String m_MaND;
